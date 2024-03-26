@@ -1,4 +1,4 @@
-.page { 
+.page {
   --page-padding: clamp(10px, 2.4vw, 20px);
   padding: var(--page-padding);
   position: relative;
@@ -11,8 +11,15 @@
 
 .header {
   display: grid;
-  grid-template-rows: clamp(228px, 60vw, 300px) 1fr clamp(228px, 60vw, 300px);
+  grid-template-rows: clamp(34vh, 58vw, 44vh) 1fr clamp(34vh, 58vw, 44vh);
   position: relative;
+  height: calc(100vh - var(--page-padding) * 2);
+  /* grid-template-rows: clamp(228px, 60vw, 300px) 1fr clamp(228px, 60vw, 300px); */
+
+  /* height: minmax(min-content, max-content); */
+  /* display: flex;
+  flex-direction: column;
+  height: 100vh; */
 }
 
 .header::after {
@@ -97,7 +104,6 @@
   font-size: 18px;
   text-align: center;
   background-color: transparent;
-  border: none;
   padding: 1.5px 13px;
   cursor: pointer;
   color: var(--accent-color);
@@ -221,8 +227,7 @@
 }
 
 .footer {
-  /* height: clamp(650px, 20vw, 768px); */
-  height: 97vh;
+  height: calc(100vh - var(--page-padding) * 2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -264,24 +269,23 @@
 }
 
 @media (width >= 768px) {
-
   .header .main-title {
-    margin-left: calc(var(--page-padding) *-1);
+    margin-left: calc(var(--page-padding) * -1);
   }
 
-  .content__heading {
-    grid-area: heading;
+  .content__heading-row {
+    grid-area: heading-row;
   }
 
-  .content__list {
-    grid-area: list;
+  .content__section-list-container {
+    grid-area: list-container;
   }
 
   .content__section_row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "heading list list";
-    gap: 20px;
+    grid-template-areas: "heading-row list-container list-container";
+    column-gap: 20px;
   }
 
   .content__image {
@@ -312,12 +316,6 @@
 
   .content__image-section {
     display: grid;
-    grid-template-columns: repeat(3, clamp(230px, 30vw, max-content));
-    grid-template-rows: clamp(192px, 20vw, max-content) clamp(
-        230px,
-        20vw,
-        max-content
-      ) clamp(318px, 20vw, max-content);
     grid-template-areas:
       "sunset sunset ice-cream"
       "tape books ice-cream"
@@ -330,6 +328,10 @@
 }
 
 @media (width >= 1024px) {
+  .header {
+    grid-template-rows: 39vh 1fr 42vh;
+  }
+
   .main-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
