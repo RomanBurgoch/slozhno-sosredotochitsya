@@ -12,24 +12,4 @@
     --accent-text-color: #353430;
     background-image: url(../images/cover-image-light.png);
   }
-
-  .header__decoration-inscription {
-    display: none;
-  }
-
-  .header::before {
-    display: none;
-  }
-
-  .header::after {
-    display: none;
-  }
-
-  .footer::before {
-    display: none;
-  }
-
-  .footer::after {
-    display: none;
-  }
 }

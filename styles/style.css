@@ -13,13 +13,8 @@
   display: grid;
   grid-template-rows: clamp(34vh, 58vw, 44vh) 1fr clamp(34vh, 58vw, 44vh);
   position: relative;
-  height: calc(100vh - var(--page-padding) * 2);
-  /* grid-template-rows: clamp(228px, 60vw, 300px) 1fr clamp(228px, 60vw, 300px); */
-
-  /* height: minmax(min-content, max-content); */
-  /* display: flex;
-  flex-direction: column;
-  height: 100vh; */
+  height: 100vh;
+  /* height: calc(100vh - var(--page-padding) * 2); */
 }
 
 .header::after {
@@ -27,7 +22,6 @@
   position: absolute;
   height: 25px;
   width: 25px;
-  background: var(--accent-color);
   background-color: transparent;
   border-inline-end: 1px solid var(--accent-color);
   border-block-start: 1px solid var(--accent-color);
@@ -35,25 +29,16 @@
   inset-block-start: 0;
 }
 
-.theme_light .header::after {
-  display: none;
-}
-
 .header::before {
   content: "";
   position: absolute;
   height: 25px;
   width: 25px;
-  background: var(--accent-color);
   background-color: transparent;
   border-inline-start: 1px solid var(--accent-color);
   border-block-end: 1px solid var(--accent-color);
   inset-inline-start: 0;
   inset-block-end: 0;
-}
-
-.theme_light .header::before {
-  display: none;
 }
 
 .header__decoration-inscription {
@@ -227,7 +212,8 @@
 }
 
 .footer {
-  height: calc(100vh - var(--page-padding) * 2);
+  /* height: calc(100vh - var(--page-padding) * 2); */
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,7 +225,6 @@
   position: absolute;
   height: 25px;
   width: 25px;
-  background: var(--accent-color);
   background-color: transparent;
   border-inline-start: 1px solid var(--accent-color);
   border-block-end: 1px solid var(--accent-color);
@@ -247,9 +232,6 @@
   inset-block-end: 0;
 }
 
-.theme_light .footer::before {
-  display: none;
-}
 
 .footer::after {
   content: "";
@@ -262,10 +244,6 @@
   border-block-start: 1px solid var(--accent-color);
   inset-inline-end: 0;
   inset-block-start: 0;
-}
-
-.theme_light .footer::after {
-  display: none;
 }
 
 @media (width >= 768px) {
