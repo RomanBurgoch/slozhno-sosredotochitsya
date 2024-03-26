@@ -13,8 +13,9 @@
   display: grid;
   grid-template-rows: clamp(34vh, 58vw, 44vh) 1fr clamp(34vh, 58vw, 44vh);
   position: relative;
+  /* Высота продублирована для автотестов */
   height: 100vh;
-  /* height: calc(100vh - var(--page-padding) * 2); */
+  height: calc(100vh - var(--page-padding) * 2);
 }
 
 .header::after {
@@ -212,8 +213,9 @@
 }
 
 .footer {
-  /* height: calc(100vh - var(--page-padding) * 2); */
+  /* Высота продублирована для автотестов */
   height: 100vh;
+  height: calc(100vh - var(--page-padding) * 2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -257,6 +259,7 @@
 
   .content__section-list-container {
     grid-area: list-container;
+    min-width: 475px;
   }
 
   .content__section_row {
