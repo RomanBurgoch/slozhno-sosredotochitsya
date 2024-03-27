@@ -10,6 +10,14 @@
   margin: 0 auto;
 }
 
+.theme-dark .page {
+  background-image: url(../images/cover-image-dark.png);
+}
+
+.theme-light .page {
+  background-image: url(../images/cover-image-light.png);
+}
+
 .header {
   display: grid;
   grid-template-rows: clamp(34vh, 58vw, 44vh) 1fr clamp(34vh, 58vw, 44vh);
@@ -130,7 +138,6 @@
   font-size: 18px;
   line-height: 23px;
   inset-inline-end: 0;
-  right: 0;
   display: block;
   width: clamp(355px, 47vw, 491px);
   height: fit-content;
@@ -309,8 +316,12 @@
 }
 
 @media (width >= 1024px) {
+  .header__paragraph {
+    min-width: 486px;
+  }
+
   .header {
-    grid-template-rows: 39vh 1fr 42vh;
+    grid-template-rows: 39vh 1fr 38vh;
   }
 
   .main-title {
