@@ -10,6 +10,9 @@
     --accent-color: #ff8dcb;
     --main-text-color: #353430;
     --accent-text-color: #353430;
+  }
+  
+  .page {
     background-image: url(../images/cover-image-light.png);
   }
 }

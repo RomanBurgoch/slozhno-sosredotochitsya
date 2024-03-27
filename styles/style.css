@@ -7,14 +7,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  margin: 0 auto;
 }
 
 .header {
   display: grid;
   grid-template-rows: clamp(34vh, 58vw, 44vh) 1fr clamp(34vh, 58vw, 44vh);
   position: relative;
-  /* Высота продублирована для автотестов */
-  height: 100vh;
   height: calc(100vh - var(--page-padding) * 2);
 }
 
@@ -38,8 +37,8 @@
   background-color: transparent;
   border-inline-start: 1px solid var(--accent-color);
   border-block-end: 1px solid var(--accent-color);
-  inset-inline-start: 0;
   inset-block-end: 0;
+  inset-inline-start: 0;
 }
 
 .header__decoration-inscription {
@@ -213,8 +212,6 @@
 }
 
 .footer {
-  /* Высота продублирована для автотестов */
-  height: 100vh;
   height: calc(100vh - var(--page-padding) * 2);
   display: flex;
   justify-content: center;
@@ -253,13 +250,16 @@
     margin-left: calc(var(--page-padding) * -1);
   }
 
+  .content__heading {
+    min-width: 236px;
+  }
+
   .content__heading-row {
     grid-area: heading-row;
   }
 
   .content__section-list-container {
     grid-area: list-container;
-    min-width: 475px;
   }
 
   .content__section_row {
