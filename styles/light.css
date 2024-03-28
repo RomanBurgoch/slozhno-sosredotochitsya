@@ -1,18 +1,23 @@
 .page.theme_light {
   --accent-color: #ff8dcb;
+  --heading-accent-color: #353430;
   --main-text-color: #353430;
   --accent-text-color: #353430;
-  background-image: url(../images/cover-image-light.png);
+  --decor-color: #353430;
+  --hover-color: rgba(50,49,45, 0.4);
+  --background-theme-image: url(../images/cover-image-light.png);
+  --appearance: none;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: #ff8dcb;
+    --heading-accent-color: #ff8dcb;
     --main-text-color: #353430;
     --accent-text-color: #353430;
-  }
-  
-  .page {
-    background-image: url(../images/cover-image-light.png);
+    --decor-color: #353430;
+    --hover-color: rgba(50,49,45, 0.4);
+    --background-theme-image: url(../images/cover-image-light.png);
+    --appearance: none;
   }
 }
