@@ -10,7 +10,7 @@
 
 .header {
   display: grid;
-  grid-template-rows: clamp(34vh, 58vw, 44vh) 1fr clamp(34vh, 58vw, 44vh);
+  grid-template-rows: 35vh 1fr 34vh;
   position: relative;
   block-size: calc(100vh - var(--page-padding) * 2);
 }
@@ -234,6 +234,10 @@
 }
 
 @media (width >= 768px) {
+  .header {
+    grid-template-rows: 43vh 1fr 44vh;
+  }
+
   .header__paragraph {
     min-width: 365px;
   }
