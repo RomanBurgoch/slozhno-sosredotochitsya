@@ -190,7 +190,6 @@
 }
 
 .content__text-link:focus-visible {
-  outline: transparent;
   outline: 1px solid var(--main-text-color);
 }
 
