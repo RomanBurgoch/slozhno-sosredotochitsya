@@ -5,6 +5,8 @@
   --main-text-color: #f1b2ce;
   --accent-text-color: #000028;
   --decor-color: #ff0070;
+  --main-title-color: #db00ff;
+  --main-title-shadow: #ff0070;
   --hover-color: rgba(255, 0, 112, 0.4);
   --background-theme-image: url(../images/cover-image.png);
   --page-padding: clamp(10px, 2.4vw, 20px);

@@ -4,6 +4,8 @@
   --main-text-color: #353430;
   --accent-text-color: #353430;
   --decor-color: #353430;
+  --main-title-color: #ffc2e6;
+  --main-title-shadow: #ff0070;
   --hover-color: rgba(50,49,45, 0.4);
   --background-theme-image: url(../images/cover-image-light.png);
   --appearance: none;
@@ -12,10 +14,12 @@
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: #ff8dcb;
-    --heading-accent-color: #ff8dcb;
+    --heading-accent-color: #353430;
     --main-text-color: #353430;
     --accent-text-color: #353430;
     --decor-color: #353430;
+    --main-title-color: #ffc2e6;
+    --main-title-shadow: #ff0070;
     --hover-color: rgba(50,49,45, 0.4);
     --background-theme-image: url(../images/cover-image-light.png);
     --appearance: none;
